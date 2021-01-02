@@ -9,28 +9,5 @@
   ;
 }
 
-.app img {
-  width: 85px;
-}
 
-.header {
-  grid-area: h;
-}
 
-.nav{
-  grid-area: n;
-  background-color: bisque;
-}
-
-.wrapper{
-  grid-area: w;
-}
-
-.wrapper img {
-  width: 100%;
-}
-
-.footer{
-  grid-area: f;
-  background-color: cyan;
-}

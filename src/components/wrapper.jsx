@@ -1,8 +1,9 @@
 import React from 'react';
+import cl from './wrapper.module.css'
 
 function Wrapper() {
     return (
-        <div className="wrapper">
+        <div className={cl.wrapper}>
             <img src="https://www.nastol.com.ua/download.php?img=202005/2560x1600/nastol.com.ua-401655.jpg" />
             <div className="avatar">ava</div>
             <div className="description">description</div>
