@@ -1,0 +1,8 @@
+.wrapper{
+    grid-area: w;
+    padding: 5px;
+  }
+  
+  .wrapper img {
+    width: 100%;
+  }
