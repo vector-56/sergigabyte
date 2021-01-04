@@ -2,3 +2,7 @@
     grid-area: n;
     background-color: bisque;
   }
+
+  .nav a {
+    padding: 5px;
+  }

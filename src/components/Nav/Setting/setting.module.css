@@ -1,0 +1,8 @@
+.setting{
+  grid-area: w;
+  padding: 5px;
+}
+
+.setting img {
+  width: 100%;
+}

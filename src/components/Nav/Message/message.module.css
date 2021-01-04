@@ -1,0 +1,14 @@
+.message{
+  grid-area: w;
+  display:grid;
+  grid-template-columns: 3fr 9fr;
+  ;
+}
+
+.dialogList {
+background-color: rgb(165, 224, 117);
+}
+
+.dialogs {
+background-color: cadetblue;
+}
