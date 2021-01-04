@@ -1,28 +1,41 @@
 import React from 'react';
 import cl from './message.module.css'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+
+function Dialog(props) {
+    return (
+        <div><NavLink to={"/message/" + props.id}>{props.name}</NavLink></div>
+    )
+}
+
+function Messages(props) {
+    return (
+        <div className={cl.dialogs}>
+            <div>{props.message}</div>
+        </div>
+    )
+}
 
 function Message() {
     return (
         <div className={cl.message}>
             <div className={cl.dialogList}>
-                <div><NavLink exact to="/message/1">Andrey</NavLink></div>
-                <div><NavLink exact to="/message/2">Victor</NavLink></div>
-                <div><NavLink exact to="/message/3">Mick</NavLink></div>
-                <div><NavLink exact to="/message/4">Jay</NavLink></div>
-                <div><NavLink exact to="/message/5">Dmitry</NavLink></div>
-                <div><NavLink exact to="/message/6">Sergey</NavLink></div>
-                <div><NavLink exact to="/message/7">Sasha</NavLink></div>
-                <div><NavLink exact to="/message/8">Vladimir</NavLink></div>
+                <Dialog name="Andrey" id="1"></Dialog>
+                <Dialog name="Mick" id="2"></Dialog>
+                <Dialog name="Jay" id="3"></Dialog>
+                <Dialog name="Dmitry" id="4"></Dialog>
+                <Dialog name="Sergey" id="5"></Dialog>
+                <Dialog name="Sasha" id="6"></Dialog>
+                <Dialog name="Vladimir" id="7"></Dialog>
             </div>
             <div className={cl.dialogs}>
-                <div>Hi</div>
-                <div>How are you?</div>
-                <div>Thanks</div>
-                <div>I'm fine!</div>
-                <div>I'm good!</div>
-                <div>I'm a dog!</div>
-                <div>I'm fun!</div>
+                <Messages message="Hi"></Messages>
+                <Messages message="How are you?"></Messages>
+                <Messages message="Thanks"></Messages>
+                <Messages message="I'm fine!"></Messages>
+                <Messages message="I'm good!"></Messages>
+                <Messages message="I'm a dog!"></Messages>
+                <Messages message="I'm fun!"></Messages>
             </div>
         </div>)
 }
