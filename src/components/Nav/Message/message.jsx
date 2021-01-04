@@ -2,6 +2,28 @@ import React from 'react';
 import cl from './message.module.css'
 import { NavLink } from 'react-router-dom'
 
+let MessageArray = [
+    { message: 'Hi', id: 1 },
+    { message: 'Aye', id: 2 },
+    { message: 'Hey', id: 3 },
+    { message: 'Hello', id: 4 },
+    { message: 'Ahoj', id: 5 },
+    { message: 'Yo', id: 6 },
+    { message: 'Kavabanga!', id: 7 },
+    { message: 'Bum', id: 8 }
+]
+
+let DialogsArray = [
+    { name: 'Andrey', id: 1 },
+    { name: 'Andrey', id: 2 },
+    { name: 'Mick', id: 3 },
+    { name: 'Dmitry', id: 4 },
+    { name: 'Sergey', id: 5 },
+    { name: 'Sasha', id: 6 },
+    { name: 'Jay', id: 7 },
+    { name: 'Vladimir', id: 8 }
+]
+
 function Dialog(props) {
     return (
         <div><NavLink to={"/message/" + props.id}>{props.name}</NavLink></div>
@@ -16,26 +38,18 @@ function Messages(props) {
     )
 }
 
+let MessageElements = MessageArray.map(m => (<Messages message={m.message} />));
+
+let DialogElements = DialogsArray.map(d => (<Dialog name={d.name} id={d.id} />))
+
 function Message() {
     return (
         <div className={cl.message}>
             <div className={cl.dialogList}>
-                <Dialog name="Andrey" id="1"></Dialog>
-                <Dialog name="Mick" id="2"></Dialog>
-                <Dialog name="Jay" id="3"></Dialog>
-                <Dialog name="Dmitry" id="4"></Dialog>
-                <Dialog name="Sergey" id="5"></Dialog>
-                <Dialog name="Sasha" id="6"></Dialog>
-                <Dialog name="Vladimir" id="7"></Dialog>
+                {DialogElements}
             </div>
             <div className={cl.dialogs}>
-                <Messages message="Hi"></Messages>
-                <Messages message="How are you?"></Messages>
-                <Messages message="Thanks"></Messages>
-                <Messages message="I'm fine!"></Messages>
-                <Messages message="I'm good!"></Messages>
-                <Messages message="I'm a dog!"></Messages>
-                <Messages message="I'm fun!"></Messages>
+                {MessageElements}
             </div>
         </div>)
 }
