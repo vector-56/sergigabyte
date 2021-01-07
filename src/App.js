@@ -5,7 +5,7 @@ import Nav from './components/Nav/nav';
 import Wrapper from './components/Wrapper/wrapper';
 import Footer from './components/Footer/footer';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Message from './components/Nav/Message/message'
+import Message from './components/Nav/Message/Messages/Message/message'
 import News from './components/Nav/News/news';
 import Music from './components/Nav/Music/music';
 import Setting from './components/Nav/Setting/setting';

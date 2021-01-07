@@ -1,5 +1,7 @@
 import React from 'react';
 import cl from './message.module.css'
+import DialogElements from './../../DialogElements/dialogElements'
+import MessageElements from '../MessageElements/messageElement'
 
 function Message() {
     return (
